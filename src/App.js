@@ -2,14 +2,25 @@ import logo from "./logo.svg";
 import "./App.css";
 import Grid from "@mui/material/Grid";
 import DataTable from "./Components/DataTable/dataTable";
-import SideBar  from "./Components/SideBar/sideBar.js";
+import SideBar from "./Components/Sidebar/sideBar.js";
+import NavBar from "./Components/Navbar/navbar.js";
+import { useState } from "react";
+import Form from "./Components/Sidebar/Form.js";
 
 function App() {
   const [middleContent, setMiddleContent] = useState("landing");
+  const [listData, setListData] = useState();
+
   const handleMiddleContent = () => {
     if (middleContent === "table") {
       return <DataTable />;
     } else if (middleContent === "landing") {
+      return (
+        <Form
+          middleContent={middleContent}
+          setMiddleContent={setMiddleContent}
+        />
+      );
       console.log("home");
       return "Welcome Home";
     } else {
@@ -34,7 +45,17 @@ function App() {
             <SideBar />
           </Grid>
           <Grid item xs={8}>
-            {handleMiddleContent()}
+            {middleContent === "landing" ? (
+              <Form
+                middleContent={middleContent}
+                setMiddleContent={setMiddleContent}
+                setListData={setListData}
+              />
+            ) : middleContent === "table" ? (
+              <DataTable listData={listData} />
+            ) : (
+              "Review Page"
+            )}
           </Grid>
         </Grid>
       </Grid>

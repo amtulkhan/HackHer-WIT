@@ -34,7 +34,9 @@ const rows = [
   { id: 9, lastName: "Roxie", firstName: "Harvey", age: 65 },
 ];
 
-export default function DataTable() {
+export default function DataTable(props) {
+  const data = props.listData;
+  console.log("TableData:", data);
   return (
     <div style={{ height: 400, width: "70%" }}>
       <DataGrid

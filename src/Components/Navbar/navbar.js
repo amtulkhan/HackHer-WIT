@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../../Assets/Logos/logo.jpeg";
 import "./navbar.css"; // Import CSS for styling
 import { Grid } from "@mui/material";
-const navBar = () => {
+const NavBar = () => {
   return (
     <Grid container xs={12} className="navbar">
       <Grid item xs={2} className="logo-container">
@@ -54,4 +54,4 @@ const navBar = () => {
   );
 };
 
-export default navBar;
+export default NavBar;
