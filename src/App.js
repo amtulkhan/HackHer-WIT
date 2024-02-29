@@ -4,8 +4,21 @@ import Grid from "@mui/material/Grid";
 import DataTable from "./Components/DataTable/dataTable";
 import SideBar from "./Components/Sidebar/sideBar.js";
 import NavBar from "./Components/Navbar/navbar.js";
+import { useState } from "react";
 
 function App() {
+  const [middleContent, setMiddleContent] = useState("landing");
+  const handleMiddleContent = () => {
+    if (middleContent === "table") {
+      return <DataTable />;
+    } else if (middleContent === "landing") {
+      console.log("home");
+      return "Welcome Home";
+    } else {
+      console.log("review");
+      return "Review Page";
+    }
+  };
   return (
     <div className="App">
       <Grid container xs={12} direction="column" justifyContent="center">
@@ -23,7 +36,7 @@ function App() {
             <SideBar />
           </Grid>
           <Grid item xs={8}>
-            <DataTable />
+            {handleMiddleContent()}
           </Grid>
         </Grid>
       </Grid>
