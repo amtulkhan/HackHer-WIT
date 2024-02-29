@@ -2,9 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Grid from "@mui/material/Grid";
 import DataTable from "./Components/DataTable/dataTable";
-import SideBar from "./Components/Sidebar/sideBar.js";
-import NavBar from "./Components/Navbar/navbar.js";
-import { useState } from "react";
+import SideBar  from "./Components/SideBar/sideBar.js";
 
 function App() {
   const [middleContent, setMiddleContent] = useState("landing");
