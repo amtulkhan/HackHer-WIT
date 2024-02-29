@@ -1,8 +1,7 @@
 .sidebar {
     background-color: #ececec;
     color: black;
-    border-bottom: 2px solid #004F98;
-    width: 16em !important;
+    border-bottom: 2px solid #004F98;    
 }
 
 .sidebar-header {
