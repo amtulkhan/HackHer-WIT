@@ -3,14 +3,17 @@ import "./App.css";
 import Grid from "@mui/material/Grid";
 import DataTable from "./Components/DataTable/dataTable";
 //import SideBar from "./Components/Sidebar/sideBar.js";
-import SideBar from "./Components/SideBar/sideBar.js";
+import SideBar from "./Components/Sidebar/sideBar.js";
 import NavBar from "./Components/Navbar/navbar.js";
 import InputForm from "./Components/InputForm/inputForm.js";
 import Form from "./Components/InputForm/Form.js";
 import { useState } from "react";
 function App() {
   const [middleContent, setMiddleContent] = useState("landing");
-  const [listData, setListData] = useState();
+  const [listData, setListData] = useState({
+    gpn: "",
+    list: [],
+  });
 
   const handleMiddleContent = () => {
     if (middleContent === "table") {
