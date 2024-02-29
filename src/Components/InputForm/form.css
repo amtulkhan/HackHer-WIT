@@ -10,7 +10,7 @@
   
   /* Styles for text fields */
   .text-field {
-    margin-bottom: 20px;
+    width: 100%;
   }
   
   /* Styles for the submit button */
