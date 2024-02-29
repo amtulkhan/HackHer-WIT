@@ -1,0 +1,55 @@
+.sidebar {
+    width: 20%;
+    height: 80%;
+    background-color: #ececec;
+    color: black;
+    top: 0;
+    left: 0;
+    /* Border at the top */
+    border-bottom: 2px solid #004F98; 
+}
+
+.sidebar-header {
+    padding: 1px;
+    padding-bottom: 2px;
+    background-color: white;
+}
+.firstrow{
+    background-color: white;
+    height: 35px;
+}
+
+.sidebar-header img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border-top: 2px solid #004F98; 
+}
+
+.sidebar-menu li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #555;
+}
+
+.sidebar-menu li a {
+    color: black;
+    text-decoration: none;
+}
+
+.triangle {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 0 8px 12px; /* You can adjust the size of the triangle by modifying these values */
+    border-color: transparent transparent transparent #123456; /* Change the last color to match your background */
+    margin-right: 10px; /* Adjust as needed */
+}
+.sidebar-menu li:hover {
+    background-color: #9dbcd4; /* Change to the desired color */
+}

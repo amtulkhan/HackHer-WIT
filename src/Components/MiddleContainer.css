@@ -1,0 +1,144 @@
+/* .waContentTitleBar {
+    background-color: #6685A3;
+    color: #FFFFFF;
+    font-weight: bold;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 10px;
+    margin-bottom: 15px;
+    margin-left: 356px;
+    margin-top: -457px;
+} */
+
+.waContentTitleBar {
+    background-color: #6685A3;
+    color: #FFFFFF;
+    font-weight: bold;
+    height: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 9px;
+    padding-right: 10px;
+    margin-bottom: 15px;
+    margin-left: px;
+    width: 118%;
+}
+
+/* .welcomebbs-table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    margin-left: 356px;
+} */
+.welcomebbs-table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;}
+
+    .welcomebbs1-table {
+        display: table;
+        border-collapse: separate;
+        box-sizing: border-box;
+        text-indent: initial;}
+
+.logo2 {
+    height: 178px;
+    width: 162px;
+    margin-left: 1px;
+}
+
+
+
+/* .logo3 {
+    height: 102px;
+    width: 397px;
+    margin-left: -18px;
+} */
+
+.logo3 {
+    height: 102px;
+    width: 397px;
+    margin-left: 144px;}
+
+.blanktd{
+    height: 45px;
+}
+
+h5{
+    margin-left: 120px;
+}
+
+.middleContainer-info
+{
+    width: 80%;
+}
+
+
+.QueryLogo {
+    margin-right: 15px;
+  }
+  
+  /* .GroupBoxGrey {
+    background-color: #eeeeee;
+    border-color: #999999;
+    border-width: 0px 1px 1px 0px;
+    border-style: solid;
+    height: 49px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 77%;
+    float: right;
+    margin-top: -31.7em;
+  } */
+
+  /* .GroupBoxGrey {
+    background-color: #eeeeee;
+    border-color: #999999;
+    border-width: 0px 1px 1px 0px;
+    border-style: solid;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 118%;
+    float: left;
+    margin-left: 0px;
+    padding-left: 9px;
+    padding-right: 10px;
+    margin: auto; */
+
+    /* .GroupBoxGrey {
+        background-color: #eeeeee;
+        border-color: #999999;
+        border-width: 0px 1px 1px 0px;
+        border-style: solid;
+        height: 49px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 10px;
+        width: 77%;
+    } */
+
+    .GroupBoxGrey {
+        background-color: #eeeeee;
+        border-color: #999999;
+        border-width: 0px 1px 1px 0px;
+        border-style: solid;
+        height: 49px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 10px;
+        padding-left: 9px;
+        width: 118%;
+    }

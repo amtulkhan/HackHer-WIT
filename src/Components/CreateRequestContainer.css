@@ -1,0 +1,102 @@
+.waContentTitleBar {
+    background-color: #6685A3;
+    color: #FFFFFF;
+    font-weight: bold;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 9px;
+    padding-right: 10px;
+}
+
+.borderGrey {
+    border-width: thin;
+    border-style: groove;
+    border-color: grey;
+}
+
+.waTableLeftPadding {
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    width: 50%;
+}
+
+.waEntryField {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    background-color: white;
+    color: black;
+}
+
+.waSearchTable {
+    margin-top: 47px;
+    width: 75%;
+    justify-content: space-between;
+}
+
+.waTableLeftPaddingProjects{
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    width: 50%;
+}
+
+.waProjectsDropDown{
+    size: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: black;
+    background-color: white;
+}
+
+.waTableLeftPaddingRole{
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    width: 50%;
+}
+
+.waRoleDropDown{
+    size: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: black;
+    background-color: white;
+}
+
+.waTableLeftPaddingSubmit{
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    width: 50%;
+}
+
+.waSubmit {
+    height: 25px;
+    width: 100px;
+}
+
+.waTableLeftPaddingDesc{
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    width: 50%;
+}
+
+.waDescription {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    background-color: white;
+    color: black;
+    height: 100px;
+    width: 500px;
+    text-align: left;
+
+}
