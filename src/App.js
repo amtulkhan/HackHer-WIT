@@ -4,9 +4,8 @@ import Grid from "@mui/material/Grid";
 import DataTable from "./Components/DataTable/dataTable";
 import SideBar from "./Components/Sidebar/sideBar.js";
 import NavBar from "./Components/Navbar/navbar.js";
+import InputForm from "./Components/InputForm/inputForm.js";
 import { useState } from "react";
-import Form from "./Components/Sidebar/Form.js";
-
 function App() {
   const [middleContent, setMiddleContent] = useState("landing");
   const [listData, setListData] = useState();
@@ -15,12 +14,6 @@ function App() {
     if (middleContent === "table") {
       return <DataTable />;
     } else if (middleContent === "landing") {
-      return (
-        <Form
-          middleContent={middleContent}
-          setMiddleContent={setMiddleContent}
-        />
-      );
       console.log("home");
       return "Welcome Home";
     } else {
@@ -40,11 +33,12 @@ function App() {
           alignItems="baseline"
           justifyContent="space-between"
           xs={12}
+          spacing={3}
         >
           <Grid item xs={2}>
             <SideBar />
           </Grid>
-          <Grid item xs={8}>
+          <Grid item xs={8} justifyContent="center">
             {middleContent === "landing" ? (
               <Form
                 middleContent={middleContent}
