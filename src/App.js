@@ -5,6 +5,7 @@ import DataTable from "./Components/DataTable/dataTable";
 import SideBar from "./Components/Sidebar/sideBar.js";
 import NavBar from "./Components/Navbar/navbar.js";
 import InputForm from "./Components/InputForm/inputForm.js";
+import Form from "./Components/Sidebar/Form.js";
 import { useState } from "react";
 function App() {
   const [middleContent, setMiddleContent] = useState("landing");
