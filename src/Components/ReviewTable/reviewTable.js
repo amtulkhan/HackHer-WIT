@@ -3,9 +3,11 @@ import { DataGrid } from "@mui/x-data-grid";
 import { useState } from "react";
 import Button from "@mui/material/Button";
 import { Grid } from "@mui/material";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 
 export default function ReviewTable(props) {
-  const [selectedRows, setSelectedRows] = useState([]);
+  const form = useRef();
   const rowData = props.reviewList;
   console.log(props.reviewList);
   const columns = [
@@ -34,7 +36,7 @@ export default function ReviewTable(props) {
           <Button
             variant="contained"
             color="secondary"
-            onClick={() => handleButton2Click(params.row.id)}
+            onClick={() => handleChase(params.row.id)}
           >
             Chase
           </Button>
@@ -42,11 +44,51 @@ export default function ReviewTable(props) {
       ),
     },
   ];
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_57mgky8", "template_6s603l2", form.current, {
+        publicKey: "rGNN8i5q_-RB8PGfj",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
+
   const handleButton1Click = () => {
     console.log("Amtul");
   };
-  const handleButton2Click = () => {
-    console.log("Khan");
+  const handleChase = () => {
+    const emailData = {
+      // Your static email data
+      to_name: "Recipient Name",
+      from_name: "Your Name",
+      message: "Your message goes here...",
+    };
+    const dummyForm = document.createElement("form");
+    const sendEmail = (e) => {
+      emailjs
+        .sendForm("service_57mgky8", "template_6s603l2", dummyForm, {
+          publicKey: "rGNN8i5q_-RB8PGfj",
+          data: emailData,
+        })
+        .then(
+          () => {
+            console.log("SUCCESS!");
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+          }
+        );
+    };
+    sendEmail();
+    alert("Email sent to approver");
   };
 
   //   const handleRaiseSubmit = () => {
@@ -85,6 +127,19 @@ export default function ReviewTable(props) {
           pageSizeOptions={[5, 10]}
           getSelectedRows
         />
+        <form ref={form} onSubmit={sendEmail} style={{ display: "none" }}>
+          <label>Name</label>
+          <input type="text" name="user_name" value={"Amtul"} />
+          <label>Email</label>
+          <input
+            type="email"
+            name="user_email"
+            value={"amtulmaswaraahmed@gmail.com"}
+          />
+          <label>Message</label>
+          <textarea name="message" />
+          <input type="submit" value="Send" />
+        </form>
       </Grid>
     </Grid>
   );
