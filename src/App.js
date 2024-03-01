@@ -2,11 +2,12 @@ import logo from "./logo.svg";
 import "./App.css";
 import Grid from "@mui/material/Grid";
 import DataTable from "./Components/DataTable/dataTable";
-//import SideBar from "./Components/Sidebar/sideBar.js";
-import SideBar from "./Components/Sidebar/sideBar.js";
+import SideBar from "./Components/SideBar/sideBar.js";
 import NavBar from "./Components/Navbar/navbar.js";
 import InputForm from "./Components/InputForm/inputForm.js";
 import Form from "./Components/InputForm/Form.js";
+import AdminForm from "./Components/InputForm/adminForm.js";
+import AdminTable from "./Components/AdminTable/adminTable.js";
 import { useState } from "react";
 import ReviewTable from "./Components/ReviewTable/reviewTable.js";
 
@@ -34,6 +35,9 @@ function App() {
       <Grid container xs={12} direction="column" justifyContent="center">
         <Grid item xs={12}>
           <NavBar />
+          <AdminTable/>
+
+          
         </Grid>
         <Grid
           container
