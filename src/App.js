@@ -8,12 +8,15 @@ import NavBar from "./Components/Navbar/navbar.js";
 import InputForm from "./Components/InputForm/inputForm.js";
 import Form from "./Components/InputForm/Form.js";
 import { useState } from "react";
+import ReviewTable from "./Components/ReviewTable/reviewTable.js";
+
 function App() {
   const [middleContent, setMiddleContent] = useState("landing");
   const [listData, setListData] = useState({
     gpn: "",
     list: [],
   });
+  const [reviewList, setReviewList] = useState([]);
 
   const handleMiddleContent = () => {
     if (middleContent === "table") {
@@ -51,9 +54,13 @@ function App() {
                 setListData={setListData}
               />
             ) : middleContent === "table" ? (
-              <DataTable listData={listData} />
+              <DataTable
+                listData={listData}
+                setMiddleContent={setMiddleContent}
+                setReviewList={setReviewList}
+              />
             ) : (
-              "Review Page"
+              <ReviewTable reviewList={reviewList} />
             )}
           </Grid>
         </Grid>
