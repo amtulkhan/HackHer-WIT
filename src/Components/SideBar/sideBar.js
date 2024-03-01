@@ -1,9 +1,7 @@
-import React from 'react';
-import { Grid } from '@mui/material';
-import    './sideBar.css';
-import { Link } from 'react-router-dom'; 
+import React from "react";
+import { Grid } from "@mui/material";
+import "./sideBar.css";
 import logo from "../../Assets/Images/sidebarimg.jpeg";
-
 
 const Sidebar = (props) => {
   const handleSubmit = () => {
@@ -40,7 +38,6 @@ const Sidebar = (props) => {
           <li onClick={handleSubmit}>
             <span className="triangle"></span>
             <a href="#">Adminstration</a>
-        
           </li>
           <li>
             <span className="triangle"></span>
