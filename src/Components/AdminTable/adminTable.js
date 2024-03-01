@@ -1,6 +1,8 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Sidebar from '../SideBar/sideBar';
 
 const staticData = [
   { id: 1, gpn: '49030969', name: 'Amtul Ahemad', lastDate: '02-03-2024' },
@@ -15,8 +17,10 @@ const TableWithButton = () => {
   };
 
   return (
-    <Grid container spacing={2}>
+    
+    <Grid container spacing={10} paddingTop={40} paddingRight={20} justifyContent={'space-between'}> 
       <Grid item xs={12}>
+      <div style={{ margin: '0 auto', textAlign: 'center' }}>
         <table style={{ width: '100%' }}>
           <thead>
             <tr>
@@ -43,6 +47,7 @@ const TableWithButton = () => {
             ))}
           </tbody>
         </table>
+        </div>
       </Grid>
     </Grid>
   );

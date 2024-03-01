@@ -34,10 +34,7 @@ function App() {
     <div className="App">
       <Grid container xs={12} direction="column" justifyContent="center">
         <Grid item xs={12}>
-          <NavBar />
-          <AdminTable/>
-
-          
+          <NavBar />          
         </Grid>
         <Grid
           container
@@ -48,7 +45,7 @@ function App() {
           spacing={3}
         >
           <Grid item xs={2}>
-            <SideBar />
+            <SideBar setMiddleContent={setMiddleContent}/>
           </Grid>
           <Grid item xs={8} justifyContent="center">
             {middleContent === "landing" ? (
@@ -63,9 +60,16 @@ function App() {
                 setMiddleContent={setMiddleContent}
                 setReviewList={setReviewList}
               />
+            ) 
+            : middleContent === "admin" ? (
+              <AdminTable
+              setMiddleContent={setMiddleContent}
+              />
+          
             ) : (
               <ReviewTable reviewList={reviewList} />
             )}
+            
           </Grid>
         </Grid>
       </Grid>
